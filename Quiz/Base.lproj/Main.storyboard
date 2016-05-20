@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iPhone5 壁紙試作.tif" translatesAutoresizingMaskIntoConstraints="NO" id="bh2-l9-SdN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llc-vD-xZd">
+                                <rect key="frame" x="0.0" y="45" width="320" height="73"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="60"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="BxW-8H-zpU">
+                                <rect key="frame" x="58" y="28" width="204" height="130"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="与えられた問題に下の３つの選択肢から選んで答えよう！全ての問題に答え終わると、あなたの理解度が分かるよ( ´ ▽ ` )ﾉ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Iw-0W-39S">
+                                <rect key="frame" x="31" y="199" width="249" height="114"/>
+                                <color key="backgroundColor" red="0.035294119268655777" green="0.023529414087533951" blue="0.070588238537311554" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.9647059440612793" green="0.98823535442352295" blue="0.98823535442352295" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N65-dU-VPV">
+                                <rect key="frame" x="64" y="404" width="192" height="100"/>
+                                <color key="backgroundColor" red="0.99607849120000003" green="0.98431378599999997" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="60"/>
+                                <state key="normal" title="START!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wgD-Ew-5eI" kind="modal" id="97i-Hn-8yX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078437566757202" green="0.83529418706893921" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="299"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="GB7-YP-tmX">
+            <objects>
+                <viewController id="wgD-Ew-5eI" customClass="QuizViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H6X-z1-ntE"/>
+                        <viewControllerLayoutGuide type="bottom" id="jno-Rb-nN6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6sW-HJ-9OV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="問題文" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-DH-QSO">
+                                <rect key="frame" x="0.0" y="36" width="320" height="242"/>
+                                <color key="backgroundColor" red="0.85490202903747559" green="0.95686280727386475" blue="0.9647059440612793" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbg-sy-XNc">
+                                <rect key="frame" x="20" y="399" width="280" height="65"/>
+                                <color key="backgroundColor" red="0.94509810209274292" green="0.68627452850341797" blue="0.89411771297454834" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.18431372940540314" green="0.12549020349979401" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="choiceAnswer:" destination="wgD-Ew-5eI" eventType="touchUpInside" id="7Re-Ho-5mz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQr-cx-79Z">
+                                <rect key="frame" x="20" y="479" width="280" height="69"/>
+                                <color key="backgroundColor" red="0.96078437566757202" green="0.81568634510040283" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.12941177189350128" green="0.12549020349979401" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="choiceAnswer:" destination="wgD-Ew-5eI" eventType="touchUpInside" id="1rR-in-Xer"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BD-hv-RzP">
+                                <rect key="frame" x="20" y="311" width="280" height="69"/>
+                                <color key="backgroundColor" red="0.92941182851791382" green="0.48627454042434692" blue="0.84313732385635376" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.1098039299249649" green="0.12549020349979401" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="choiceAnswer:" destination="wgD-Ew-5eI" eventType="touchUpInside" id="ID4-xZ-Vbb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="choiceButton1" destination="9BD-hv-RzP" id="RoZ-X4-FNy"/>
+                        <outlet property="choiceButton2" destination="Dbg-sy-XNc" id="sgS-NM-JK7"/>
+                        <outlet property="choiceButton3" destination="zQr-cx-79Z" id="aul-CL-Kqo"/>
+                        <outlet property="quizTextView" destination="IB3-DH-QSO" id="ROz-5P-Lcc"/>
+                        <segue destination="6mU-RJ-G5j" kind="modal" identifier="toResultView" id="CuS-3O-dxD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YzR-vh-rAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="309"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="RgB-gb-daH">
+            <objects>
+                <viewController id="6mU-RJ-G5j" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wWS-rx-OXE"/>
+                        <viewControllerLayoutGuide type="bottom" id="bkh-XN-Mle"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="azP-QJ-jYV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pnk.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="aq2-QH-lid">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hkds.png" translatesAutoresizingMaskIntoConstraints="NO" id="pIZ-gq-cza">
+                                <rect key="frame" x="5" y="28" width="311" height="206"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="4.gif" translatesAutoresizingMaskIntoConstraints="NO" id="96k-ev-Ex9">
+                                <rect key="frame" x="-28" y="387" width="209" height="181"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6X-sy-UNf">
+                                <rect key="frame" x="163" y="337" width="148" height="135"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="16"/>
+                                <state key="normal" title="タイトルへ戻る" backgroundImage="heart.png">
+                                    <color key="titleColor" red="0.023529414087533951" green="0.0078431377187371254" blue="0.023529414087533951" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="back" destination="6mU-RJ-G5j" eventType="touchUpInside" id="hEq-i7-JcY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCg-QW-13L">
+                                <rect key="frame" x="53" y="91" width="229" height="87"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="55"/>
+                                <color key="textColor" red="0.76862752437591553" green="0.070588238537311554" blue="0.36862745881080627" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="正解数は" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1T-D9-Sh0">
+                                <rect key="frame" x="42" y="62" width="113" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.023529414087533951" green="0.13725490868091583" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="問でした！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUO-2c-MUy">
+                                <rect key="frame" x="201" y="164" width="104" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.031372550874948502" green="0.12549020349979401" blue="0.9490196704864502" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="gCg-QW-13L" id="Khq-4F-wCk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idh-kJ-7fF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="309"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="4.gif" width="600" height="500"/>
+        <image name="heart.png" width="611" height="538"/>
+        <image name="hkds.png" width="706" height="442"/>
+        <image name="iPhone5 壁紙試作.tif" width="640" height="1136"/>
+        <image name="pnk.jpeg" width="954" height="1272"/>
+    </resources>
+</document>
